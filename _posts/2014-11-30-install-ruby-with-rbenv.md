@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby環境構築
+title: rbenvとruby-buildを使ってRubyをインストール
 category: howto
 tags : [Ruby, 環境, Linux]
 description: rbenvとruby-buildによるLinux向けRuby環境の構築
