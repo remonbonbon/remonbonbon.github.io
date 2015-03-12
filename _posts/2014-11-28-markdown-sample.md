@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markdownサンプル
-category: example
+category: examples
 tags : [Markdown, サンプル]
 description: Markdownの記述サンプル
 ---

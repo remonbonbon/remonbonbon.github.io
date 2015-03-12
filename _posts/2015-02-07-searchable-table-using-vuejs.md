@@ -1,7 +1,7 @@
 ---
 layout: post
 title: vue.jsを使った検索可能なテーブル
-category: example
+category: examples
 tags : [JavaScript, vue.js]
 description: vue.jsを使ってインクリメンタルサーチとソートができるテーブルを作る。
 ---

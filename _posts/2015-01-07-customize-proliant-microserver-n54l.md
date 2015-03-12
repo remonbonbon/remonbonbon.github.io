@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HP ProLiant MicroServer N54Lをカスタマイズ
-category: hardware
+category: hardwares
 tags : [MicroServer, HDD, SSD, ファン]
 description: MicroServerのディスクとファンを換装して静音化。
 ---
