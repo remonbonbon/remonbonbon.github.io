@@ -7,7 +7,7 @@ layout: default
 {% for post in site.posts limit:10 %}
 <article class="abstract_box">
   <header class="title">
-    <h3><a href="{{ post.url }}">{{ post.title }} {% if post.tagline %}<small>{{post.tagline}}</small>{% endif %}</a></h3>
+    <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }} {% if post.tagline %}<small>{{post.tagline}}</small>{% endif %}</a></h3>
   </header>
   <div class="detail">
     <div>{{ post.description }}</div>

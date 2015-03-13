@@ -51,17 +51,35 @@
     <div class="container-fluid">
       <div class="row">
         <!-- main article -->
-        <article class="col-sm-10">
+        <article class="col-sm-9">
           {{ content }}
         </article>
         <!-- side bar -->
-        <nav class="col-sm-2">
-          <div><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> All categories</div>
+        <nav class="col-sm-3">
+          <!-- recent posts -->
+          <h5><span class="glyphicon glyphicon glyphicon-asterisk" aria-hidden="true"></span> Recent posts</h5>
+          <ul class="recent_posts">
+            {% for post in site.posts limit:10 %}
+              {% capture this_date %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+              {% capture prev_date %}{{ post.next.date | date: "%Y-%m" }}{% endcapture %}
+              {% if forloop.first %}
+                <li class="date">{{this_date}}</li>
+              {% else %}
+                {% if this_date != prev_date %}
+                  <li class="date">{{this_date}}</li>
+                {% endif %}
+              {% endif %}
+              <li class="title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <!-- all categories -->
+          <h5><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> All categories</h5>
           <ul class="tag_box inline">
             {% assign categories_list = site.categories %}
             {% include JB/categories_list %}
           </ul>
-          <div><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> All tags</div>
+          <!-- all tags -->
+          <h5><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> All tags</h5>
           <ul class="tag_box inline">
             {% assign tags_list = site.tags %}
             {% include JB/tags_list %}
