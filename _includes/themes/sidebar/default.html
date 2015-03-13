@@ -73,7 +73,8 @@
       <hr>
       <footer class="row">
         <div class="col-sm-12">
-          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+          <p>&copy; {{ site.time | date: '%Y' }}
+            <a href="http://github.com/{{ site.author.github }}" target="_blank">{{ site.author.name }}</a>
             with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
             and <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
           </p>
