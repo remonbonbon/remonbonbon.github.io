@@ -19,14 +19,6 @@
 .pagination {
   margin: 0; }
 
-/* abstract_box (for index.md) */
-.abstract_box .detail {
-  padding-left: 1em; }
-.abstract_box .detail .date {
-  line-height: 28px;
-  vertical-align: text-bottom;
-  color: #555; }
-
 /* recent posts */
 .recent_posts {
   list-style: none;

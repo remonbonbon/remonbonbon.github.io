@@ -1,0 +1,8 @@
+/* styles for index.md */
+/* abstract_box */
+.abstract_box .detail {
+  padding-left: 1em; }
+.abstract_box .detail .date {
+  line-height: 28px;
+  vertical-align: text-bottom;
+  color: #555; }

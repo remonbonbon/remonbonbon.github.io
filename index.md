@@ -2,6 +2,7 @@
 layout: default
 ---
 {% include JB/setup %}
+<link rel="stylesheet" href="{{ BASE_PATH }}/assets/index.css" media="all">
 
 <!-- show recent posts -->
 {% for post in site.posts limit:10 %}
