@@ -7,5 +7,5 @@ layout: default
 {% for post in site.posts limit:1 %}
   {% assign page = post %}
   {% assign content = post.content %}
-  {% include themes/twitter/post.html %}
+  {% include themes/sidebar/post.html %}
 {% endfor %}
