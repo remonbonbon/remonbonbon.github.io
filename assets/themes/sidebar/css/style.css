@@ -19,12 +19,21 @@
 .pagination {
   margin: 0; }
 
+/* abstract_box */
+.abstract_box .detail {
+  padding-left: 1em; }
+.abstract_box .detail .date {
+  line-height: 28px;
+  vertical-align: text-bottom;
+  color: #555; }
 
 /* tag_box */
 .tag_box {
   list-style: none;
   margin: 0;
-  overflow: hidden; }
+  padding: 0 0 0 1em;
+  overflow: hidden;
+  display: inline-block; }
 
 .tag_box li {
   line-height: 28px; }
