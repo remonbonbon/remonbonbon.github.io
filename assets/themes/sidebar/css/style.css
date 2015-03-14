@@ -8,12 +8,26 @@
   font-weight: bold; }
 
 /* smaller cotent headings font size */
-.content h1 { font-size: 24px;}
-.content h2 { font-size: 18px;}
-.content h3 { font-size: 16px;}
-.content h4 { font-size: 14px;}
-.content h5 { font-size: 12px;}
-.content h6 { font-size: 100%;}
+.content h1 {
+  font-size: 180%;
+  font-weight: bold;
+  border-bottom: 1px solid #eee; }
+.content h2 {
+  font-size: 150%;
+  font-weight: bold;
+  border-bottom: 1px solid #eee; }
+.content h3 {
+  font-size: 130%;
+  font-weight: bold; }
+.content h4 {
+  font-size: 120%;
+  font-weight: bold; }
+.content h5 {
+  font-size: 110%;
+  font-weight: bold; }
+.content h6 {
+  font-size: 100%;
+  font-weight: bold; }
 
 /* kill pagination top margin */
 .pagination {
