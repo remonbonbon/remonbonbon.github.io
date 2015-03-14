@@ -1,9 +1,9 @@
 ---
 layout: post
-title: nvmを使ってnodeをインストール
+title: nvmを使ってnode.jsをインストール
 category: howto
-tags : [node, nvm]
-description: nodeバージョン管理ツールnvmを使ってnodeをインストールする。
+tags : [node.js, nvm]
+description: node.jsバージョン管理ツールnvmを使ってnode.jsをインストールする。
 ---
 # nvmとは？
 インストール・使用するnode.jsのバージョンを管理し、簡単に切り替えられるようにするツール。
@@ -26,8 +26,8 @@ if [[ -s ~/.nvm/nvm.sh ]];
 fi
 ~~~
 
-## nodeのインストール
-nodeのバージョンを変えるときも同様。
+## node.jsのインストール
+node.jsのバージョンを変えるときも同様。
 
 ~~~
 $ nvm ls-remote
