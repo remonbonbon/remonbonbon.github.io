@@ -15,6 +15,7 @@ vue.jsを使うと、余分なコードは一切なく驚くほど簡単にで�
 `name`モデルが無い状態で、`filterBy ～ in name`だと全プロパティが検索対象になり、エラーも警告も出ないので注意。
 
 ## 例
+{% raw %}
 <div id="test-app">
   Search <input type="text" v-model="searchText" placeholder="type {{searchKey}}">
   in <select v-model="searchKey">
@@ -53,6 +54,7 @@ vue.jsを使うと、余分なコードは一切なく驚くほど簡単にで�
     }
   });
 </script>
+{% endraw %}
 
 ~~~
 <div id="test-app">
