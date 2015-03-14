@@ -1,2 +1,2 @@
-# remonbonbon.github.io
-web log
+# remonbonbon's weblog
+<http://remonbonbon.github.io/>
