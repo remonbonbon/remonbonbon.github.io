@@ -25,6 +25,9 @@ author :
 #
 production_url : http://remonbonbon.github.io
 
+# for sidebar theme
+lang: ja
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
