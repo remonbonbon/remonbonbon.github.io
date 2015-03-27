@@ -3,28 +3,29 @@
 </div>
 <div class="row">
   <div class="col-sm-12 post">
-    <div class="date">
-      <span>{{ page.date | date: "%Y-%m-%d" }}</span>
+    <div class="post-meta">
+      <div class="date">{{ page.date | date: "%Y-%m-%d" }}</div>
+
+      {% unless page.categories == empty %}
+        <ul class="tag_box inline">
+          <li><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> </li>
+          {% assign categories_list = page.categories %}
+          {% include JB/categories_list %}
+        </ul>
+      {% endunless %}
+
+      {% unless page.tags == empty %}
+        <ul class="tag_box inline">
+          <li><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> </li>
+          {% assign tags_list = page.tags %}
+          {% include JB/tags_list %}
+        </ul>
+      {% endunless %}
     </div>
-    <div class="content">
+
+    <article class="content">
       {{ content }}
-    </div>
-
-  {% unless page.categories == empty %}
-    <ul class="tag_box inline">
-      <li><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> </li>
-      {% assign categories_list = page.categories %}
-      {% include JB/categories_list %}
-    </ul>
-  {% endunless %}  
-
-  {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> </li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
+    </article>
 
     <hr>
     <nav class="text-center">
@@ -46,6 +47,6 @@
   {% if site.JB.comments.provider %}
     <hr>
     {% include JB/comments %}
-  {% endif %}  
+  {% endif %}
   </div>
 </div>
