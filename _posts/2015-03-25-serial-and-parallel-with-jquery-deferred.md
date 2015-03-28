@@ -39,7 +39,7 @@ defer.done(function() {
 ~~~
 
 ## 並列つなぎ
-`jQuery.when()`の引数に与える。
+`jQuery.when()`の引数にDeferredを与える。
 
 ~~~
 $.when(
