@@ -20,6 +20,7 @@ http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_
 
 インスタンスの作成
 =============================
+
 ## パスワードでログインする場合
 OpenStack Dashboardの「作成後」タブに以下を入力。デフォルトユーザのパスワードを変える。
 (デフォルトユーザにはパスワードが設定されていないため、そのままだとログインできない？)  
