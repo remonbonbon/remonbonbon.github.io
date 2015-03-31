@@ -20,6 +20,7 @@ http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_
 
 インスタンスの作成
 =============================
+## パスワードでログインする場合
 OpenStack Dashboardの「作成後」タブに以下を入力。デフォルトユーザのパスワードを変える。
 (デフォルトユーザにはパスワードが設定されていないため、そのままだとログインできない？)  
 [Fedora 21 - Cloud | Richard Bucker](http://www.richardbucker.com/2015/02/fedora-21-cloud.html)
@@ -32,6 +33,12 @@ password: fedora
 chpasswd: { expire: False }
 ssh_pwauth: True
 ~~~
+
+## 公開鍵暗号を使う場合
+1. OpenStack Dashboardでキーペアを作成し、秘密鍵をダウンロードしておく。
+2. インスタンス作成時に、作成したキーペアを指定する。
+3. SSHログイン時に、ダウンロードした秘密鍵を使う。
+
 
 DNSの変更
 =============================
