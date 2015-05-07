@@ -19,6 +19,7 @@ set showcmd
 set display=lastline
 set tabstop=2
 
+colorscheme desert
 syntax on
 ~~~
 
