@@ -100,3 +100,9 @@ Ant:          Apache Ant(TM) version 1.9.4 compiled on April 29 2014
 JVM:          1.7.0_79 (Oracle Corporation 24.79-b02)
 OS:           Linux 3.13.0-52-generic amd64
 ~~~
+
+このままでも良いが、`gradle.bat`が補間の邪魔なので消し飛ばす。
+
+~~~
+$ rm `which gradle.bat`
+~~~
