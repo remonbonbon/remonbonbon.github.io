@@ -11,7 +11,7 @@ description: gitlabをインストールする方法。
 ### 実施環境
 Ubuntu 14.04 (OpenStack VM)
 
-1. Install and configure the necessary dependencies
+Install and configure the necessary dependencies
 ------------------------------------------------------
 
 ~~~
@@ -21,7 +21,7 @@ $ sudo apt-get install openssh-server ca-certificates postfix
 インストール時に出てくる「Postfix Configuration」ダイアログは`Internet Site`を選択する。
 
 
-2. Download the Omnibus package and install everything
+Download the Omnibus package and install everything
 --------------------------------------------------------
 
 ~~~
@@ -51,7 +51,7 @@ gitlab:
 It looks like GitLab has not been installed yet; skipping the upgrade script.
 ~~~
 
-3. Configure and start GitLab
+Configure and start GitLab
 --------------------------------
 
 ~~~
@@ -64,7 +64,7 @@ gitlab Reconfigured!
 chefが走る。
 
 
-4. Browse to the hostname and login
+Browse to the hostname and login
 --------------------------------------
 <http://127.0.0.1/>にアクセス。ログイン画面が表示される。
 
