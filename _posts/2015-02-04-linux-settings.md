@@ -3,7 +3,7 @@ layout: post
 title: Linuxの設定
 category: memo
 tags : [Linux, 設定]
-description: vim, iptablesの基本設定値
+description: vim, iptablesなどの設定値
 ---
 ## .vimrc
 ~~~
@@ -26,19 +26,14 @@ syntax on
 ## iptables
 ~~~
 *filter
-# chain definitions
 :INPUT    DROP [0:0]
 :FORWARD  ACCEPT [0:0]
 :OUTPUT   ACCEPT [0:0]
 
-# filter rules
-## loopback
 -A INPUT -i lo -j ACCEPT
-
-## state
 -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
-## http
+## HTTP
 -A INPUT -p tcp --dport 80 -j ACCEPT
 
 ## ping (local only)
@@ -49,9 +44,39 @@ syntax on
 -A INPUT -s 192.168.11.0/24 -p tcp --dport 22 -j ACCEPT
 
 ## samba (local only)
+-A INPUT -m state --state NEW -m udp -p udp -s 192.168.11.0/24 --dport 137 -j ACCEPT
+-A INPUT -m state --state NEW -m udp -p udp -s 192.168.11.0/24 --dport 138 -j ACCEPT
 -A INPUT -m state --state NEW -m tcp -p tcp -s 192.168.11.0/24 --dport 139 -j ACCEPT
 -A INPUT -m state --state NEW -m tcp -p tcp -s 192.168.11.0/24 --dport 445 -j ACCEPT
 
 COMMIT
 ~~~
 
+## NTP
+~~~
+server ntp1.jst.mfeed.ad.jp
+server ntp2.jst.mfeed.ad.jp
+server ntp3.jst.mfeed.ad.jp
+server ntp.nict.jp
+~~~
+
+## samba
+~~~
+[global]
+workgroup = WORKGROUP
+dos charset = CP932
+unix charset = UTF-8
+
+wide links = yes
+unix extensions  = no
+map archive = no
+
+[xxxx]
+path = /home/xxxx
+writeable = yes
+read only = no
+create mask = 0644
+directory mask = 0755
+force group = xxxx
+force user = xxxx
+~~~
