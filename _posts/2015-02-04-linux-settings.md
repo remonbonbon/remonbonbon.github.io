@@ -21,6 +21,9 @@ set tabstop=2
 
 colorscheme desert
 syntax on
+
+set list
+set listchars=tab:>_,trail:_,extends:>,precedes:<,nbsp:%
 ~~~
 
 ## iptables
