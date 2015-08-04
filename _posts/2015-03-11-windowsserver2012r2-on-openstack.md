@@ -49,7 +49,7 @@ Idx     Met         MTU          状態                 名前
   1          50  4294967295  connected     Loopback Pseudo-Interface 1
  12           5        1500  connected     Ethernet
 
->netsh interface ipv4 set interface 12 mtu=1454
+>netsh interface ipv4 set interface 12 mtu=1454 store=persistent
 OK
 
 >netsh interface ipv4 show interface
