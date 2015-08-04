@@ -37,6 +37,29 @@ Administratorのパスワードを変更するように言われている。
 DNSを変える。IPv6はオフにする。
 これでインターネットに接続できるようになる。
 
+### MTU変更
+OpenStackはMTUが1454になっているが、Windowsは1500なので、このままでは一部のOpenStack horizon等にアクセスできない。
+そのためMTUを1454に変更する。
+
+~~~
+>netsh interface ipv4 show interface
+
+Idx     Met         MTU          状態                 名前
+---  ----------  ----------  ------------  ---------------------------
+  1          50  4294967295  connected     Loopback Pseudo-Interface 1
+ 12           5        1500  connected     Ethernet
+
+>netsh interface ipv4 set interface 12 mtu=1454
+OK
+
+>netsh interface ipv4 show interface
+
+Idx     Met         MTU          状態                 名前
+---  ----------  ----------  ------------  ---------------------------
+  1          50  4294967295  connected     Loopback Pseudo-Interface 1
+ 12           5        1454  connected     Ethernet
+~~~
+
 ユーザ作成
 ---------------------------
 まずパスワードポリシーを変えて制限を無くす。
