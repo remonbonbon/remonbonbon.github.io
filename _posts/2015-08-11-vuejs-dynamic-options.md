@@ -54,6 +54,7 @@ var vm = new Vue({
 });
 ~~~
 
+{% raw %}
 <div id="app">
 	<p>Status: {{status}}</p>
 	<p>Selected: {{selected}}</p>
@@ -87,3 +88,4 @@ var vm = new Vue({
 	}
 });
 </script>
+{% endraw %}
