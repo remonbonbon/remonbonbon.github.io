@@ -31,6 +31,7 @@ Vue.js 0.12.10 options
 ~~~
 
 JavaScript code:
+
 ~~~
 var vm = new Vue({
 	el: "#app",
