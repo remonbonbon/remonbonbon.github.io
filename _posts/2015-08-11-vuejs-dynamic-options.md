@@ -34,58 +34,62 @@ JavaScript code:
 
 ~~~
 var vm = new Vue({
-	el: "#app",
-	data: {
-		options: [],
-		selected: "user" + Math.round(Math.random() * 2 + 1),
-		status: "loading options",
-	},
-	ready: function() {
-		setTimeout(function() {
-			this.options = [
-				{value: "user0", text: "ユーザ0"},
-				{value: "user1", text: "ユーザ1"},
-				{value: "user2", text: "ユーザ2"},
-				{value: "user3", text: "ユーザ3"},
-			];
-			this.status = "done";
-		}.bind(this), 500);
-	}
+  el: "#app",
+  data: {
+    options: [],
+    selected: "user" + Math.round(Math.random() * 2 + 1),
+    status: "loading options",
+  },
+  ready: function() {
+    setTimeout(function() {
+      this.options = [
+        {value: "user0", text: "ユーザ0"},
+        {value: "user1", text: "ユーザ1"},
+        {value: "user2", text: "ユーザ2"},
+        {value: "user3", text: "ユーザ3"},
+      ];
+      this.status = "done";
+    }.bind(this), 500);
+  }
 });
 ~~~
 
+### Example
+
 {% raw %}
 <div id="app">
-	<p>Status: {{status}}</p>
-	<p>Selected: {{selected}}</p>
-	<h2>Before (vue.js 0.12.9)</h2>
-	<select v-model="selected">
-		<option v-repeat="options" value="{{value}}">{{text}}</option>
-	</select>
-	<h2>After (vue.js 0.12.10)</h2>
-	<select v-model="selected" options="options">
-	</select>
+  <p>Status: {{status}}</p>
+  <p>Selected: {{selected}}</p>
+  <p>Before (vue.js 0.12.9):
+    <select v-model="selected" options="options">
+    </select>
+  </p>
+  <p>After (vue.js 0.12.10):
+    <select v-model="selected">
+      <option v-repeat="options" value="{{value}}">{{text}}</option>
+    </select>
+  </p>
 </div>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.12.10/vue.min.js"></script>
 <script>
 var vm = new Vue({
-	el: "#app",
-	data: {
-		options: [],
-		selected: "user" + Math.round(Math.random() * 2 + 1),
-		status: "loading options",
-	},
-	ready: function() {
-		setTimeout(function() {
-			this.options = [
-				{value: "user0", text: "ユーザ0"},
-				{value: "user1", text: "ユーザ1"},
-				{value: "user2", text: "ユーザ2"},
-				{value: "user3", text: "ユーザ3"},
-			];
-			this.status = "done";
-		}.bind(this), 500);
-	}
+  el: "#app",
+  data: {
+    options: [],
+    selected: "user" + Math.round(Math.random() * 2 + 1),
+    status: "loading options",
+  },
+  ready: function() {
+    setTimeout(function() {
+      this.options = [
+        {value: "user0", text: "ユーザ0"},
+        {value: "user1", text: "ユーザ1"},
+        {value: "user2", text: "ユーザ2"},
+        {value: "user3", text: "ユーザ3"},
+      ];
+      this.status = "done";
+    }.bind(this), 500);
+  }
 });
 </script>
 {% endraw %}
