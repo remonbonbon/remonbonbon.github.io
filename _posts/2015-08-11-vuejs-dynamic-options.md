@@ -61,12 +61,12 @@ var vm = new Vue({
   <p>Status: {{status}}</p>
   <p>Selected: {{selected}}</p>
   <p>Before (vue.js 0.12.9):
-    <select v-model="selected" options="options">
+    <select v-model="selected">
+      <option v-repeat="options" value="{{value}}">{{text}}</option>
     </select>
   </p>
   <p>After (vue.js 0.12.10):
-    <select v-model="selected">
-      <option v-repeat="options" value="{{value}}">{{text}}</option>
+    <select v-model="selected" options="options">
     </select>
   </p>
 </div>
