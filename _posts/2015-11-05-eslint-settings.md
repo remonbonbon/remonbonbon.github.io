@@ -1,9 +1,9 @@
 ---
 layout: post
-title: eslintの設定
+title: ESlintの設定
 category: memo
 tags : [設定, ESlint]
-description: vim, iptablesなどの設定値
+description: ESlintのルール設定
 ---
 
 ### Default rules
