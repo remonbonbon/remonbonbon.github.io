@@ -73,6 +73,8 @@ unix charset = UTF-8
 wide links = yes
 unix extensions  = no
 map archive = no
+load printers = no
+disable spoolss = yes
 
 [xxxx]
 path = /home/xxxx
